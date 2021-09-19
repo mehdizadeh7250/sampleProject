@@ -2,6 +2,7 @@ package com.example.baloot.alimehdizadeh.data.repository
 
 import com.example.baloot.alimehdizadeh.data.source.local.AppDataBase
 import com.example.baloot.alimehdizadeh.data.source.network.routes.ApiService
+import com.example.baloot.alimehdizadeh.domain.model.local.DatabaseEntity
 import com.example.baloot.alimehdizadeh.domain.model.remote.GetEveryThingFromQuery
 import com.example.baloot.alimehdizadeh.domain.repository.ErrorHandler
 import com.example.baloot.alimehdizadeh.domain.repository.GetDataQueryRepository
@@ -23,4 +24,5 @@ class GetDataQueryRepositoryImpl(
         retrofitApiServices.getTopArtistListTracks(query, sortBy, apiKey, page)
             .toResult(errorHandler)
 
+    override fun saveQuery(tracks: DatabaseEntity)= appDataBase.getEntityDao().insertEntity(tracks)
 }

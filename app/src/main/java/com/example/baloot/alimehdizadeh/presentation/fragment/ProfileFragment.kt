@@ -2,8 +2,6 @@ package com.example.baloot.alimehdizadeh.presentation.fragment
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.baloot.alimehdizadeh.R

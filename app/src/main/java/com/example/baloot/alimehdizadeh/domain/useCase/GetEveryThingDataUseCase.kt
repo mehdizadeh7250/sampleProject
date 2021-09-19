@@ -1,11 +1,11 @@
 package com.example.baloot.alimehdizadeh.domain.useCase
 
+import com.example.baloot.alimehdizadeh.domain.model.local.DatabaseEntity
 import com.example.baloot.alimehdizadeh.domain.model.remote.GetEveryThingFromQuery
 import com.example.baloot.alimehdizadeh.domain.repository.GetDataQueryRepository
 import com.example.baloot.alimehdizadeh.domain.useCase.baseUseCase.BaseUseCase
 import com.example.baloot.alimehdizadeh.utils.Response
 import kotlinx.coroutines.flow.Flow
-import retrofit2.http.Query
 import javax.inject.Inject
 
 class GetEveryThingDataUseCase @Inject constructor(
@@ -33,5 +33,8 @@ class GetEveryThingDataUseCase @Inject constructor(
                 }
             }
         )
+    }
+    fun saveQueries(entity : DatabaseEntity){
+        getEveryThingQueryRepository.saveQuery(entity)
     }
 }

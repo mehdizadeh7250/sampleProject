@@ -1,9 +1,6 @@
 package com.example.baloot.alimehdizadeh.domain.model.remote
 
 import android.os.Parcelable
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 import com.bluelinelabs.logansquare.annotation.JsonObject
 
 import com.bluelinelabs.logansquare.annotation.JsonField

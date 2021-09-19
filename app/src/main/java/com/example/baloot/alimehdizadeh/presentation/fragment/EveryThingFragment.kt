@@ -2,16 +2,16 @@ package com.example.baloot.alimehdizadeh.presentation.fragment
 
 import android.os.Bundle
 import android.view.View
-import android.widget.GridLayout
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.bluelinelabs.logansquare.LoganSquare
 import com.example.baloot.alimehdizadeh.BR
 import com.example.baloot.alimehdizadeh.R
 import com.example.baloot.alimehdizadeh.databinding.FragmentEveryThingBinding
 import com.example.baloot.alimehdizadeh.databinding.ItemNewsBinding
+import com.example.baloot.alimehdizadeh.domain.model.local.DatabaseEntity
 import com.example.baloot.alimehdizadeh.domain.model.remote.Article
 import com.example.baloot.alimehdizadeh.presentation.base.BaseFragment
 import com.example.baloot.alimehdizadeh.presentation.viewModel.EveryThingFragmentViewModel
@@ -43,6 +43,7 @@ class EveryThingFragment : BaseFragment<FragmentEveryThingBinding>() {
                 }
             }
         )
+
         val gridLayoutManager =
             GridLayoutManager(requireContext(), 2)
         endlessRecyclerOnScrollListener =
@@ -58,6 +59,8 @@ class EveryThingFragment : BaseFragment<FragmentEveryThingBinding>() {
             addOnScrollListener(endlessRecyclerOnScrollListener!!)
         }
         viewModel.everyThingData.observe(viewLifecycleOwner) { response ->
+            val entity = DatabaseEntity(response = LoganSquare.serialize(response.articles))
+            viewModel.saveData(entity)
             if (endlessRecyclerOnScrollListener?.currentPage == 1) {
 
                 response?.articles?.let { articleList.addAll(it) }

@@ -1,6 +1,5 @@
 package com.example.baloot.alimehdizadeh.presentation.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import com.example.baloot.alimehdizadeh.R

@@ -1,5 +1,6 @@
 package com.example.baloot.alimehdizadeh.domain.repository
 
+import com.example.baloot.alimehdizadeh.domain.model.local.DatabaseEntity
 import com.example.baloot.alimehdizadeh.domain.model.remote.GetEveryThingFromQuery
 import com.example.baloot.alimehdizadeh.utils.Response
 import kotlinx.coroutines.flow.Flow
@@ -13,4 +14,5 @@ interface GetDataQueryRepository {
         @Query("apiKey") apiKey: String,
         @Query("page") page: Int
     ): Flow<Response<GetEveryThingFromQuery>>
+    fun saveQuery(tracks: DatabaseEntity)
 }

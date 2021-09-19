@@ -1,8 +1,9 @@
 package com.example.baloot.alimehdizadeh.presentation.viewModel
 
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.bluelinelabs.logansquare.LoganSquare
+import com.example.baloot.alimehdizadeh.domain.model.local.DatabaseEntity
 import com.example.baloot.alimehdizadeh.domain.model.remote.GetEveryThingFromQuery
 import com.example.baloot.alimehdizadeh.domain.useCase.GetEveryThingDataUseCase
 import com.example.baloot.alimehdizadeh.presentation.base.BaseViewModel
@@ -46,6 +47,7 @@ class EveryThingFragmentViewModel @Inject constructor(
                             }.collect { response ->
                                 val result = handleResponse(response)
                                 if (result != null) {
+
                                     everyThingDataLiveData.postValue(result!!)
                                 }
                             }
@@ -63,5 +65,8 @@ class EveryThingFragmentViewModel @Inject constructor(
 
     fun nextContactUsPage(page: Int) {
         scope.launch { paginator.send(page) }
+    }
+    fun saveData(entity: DatabaseEntity){
+        getEveryThingDataUseCase.saveQueries(entity)
     }
 }
