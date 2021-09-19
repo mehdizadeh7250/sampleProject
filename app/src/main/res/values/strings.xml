@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">balootAliMehdizadeh</string>
+    <string name="about_me">I\'m currently in the Android programming branch for mobile apps and its programming is a hobby and a challenge , and I\'m getting involved with it every day</string>
+    <string name="work_experience">WORK EXPERIENCE :\n Android Developer \n
+                    Pardazesh Negar Rashin \n
+                    12/2019 - Present, Tehran Rashin , with the aim of promoting the use of mobile services, production of multimedia software, online games, development of content-based services with an innovation approach and Creativity is one of the leading collections in Iran and the region. WhiteBoard
+                    \n Gapfilm
+                    \n In2
+                    \n Arabic WhiteBoard
+                    \n Android Developer
+                    \n Hamgam Pardaz Andish
+                    \n 03/2018 - 12/2019, Tehran Provides advanced IT solutions and management consulting to large
+                    \n corporations, academia and technology centers, as well as
+                    \n industries.
+                    \n JTI Internal Sales Automation
+                    \n Market Orient</string>
+
+
+    <string name="skills">SKILLS : \n
+Kotlin\n Java\n Git\n MVVM\n MVP\n
+Data Binding\n RxJava\n Coroutines\n Dagger 2.0\n
+Hilt\n Clean Architecture\n Retrofit\n Volley\n
+Json\n Android LifeCycle\n Android Design Pattern\n
+Navigation Pattern \nReactiveX Pattern\n
+Material Design\n Room\n Sqlite\n Firebase\n
+Scrum \nJira \nGoogle Api\n GoogleMap\n
+Android SDK\n Exo Player \nThird Party library</string>
+    <string name="developer">Android Developer</string>
+    <string name="name">Ali mehdizadeh</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="github">Github</string>
+</resources>

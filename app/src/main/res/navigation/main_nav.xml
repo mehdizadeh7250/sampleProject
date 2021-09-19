@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.baloot.alimehdizadeh.presentation.fragment.SplashFragment">
+        <action
+            android:id="@+id/navigate_to_main_fragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.baloot.alimehdizadeh.presentation.fragment.MainFragment">
+        <action
+            android:id="@+id/nav_to_homeNav"
+            app:destination="@id/home_nav" />
+    </fragment>
+    <include app:graph="@navigation/home_nav" />
+</navigation>

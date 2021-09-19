@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/home_container"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/home_nav" />
+
+        <np.com.susanthapa.curved_bottom_navigation.CurvedBottomNavigationView
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:elevation="5dp"
+            android:layoutDirection="ltr"
+            app:cbn_bg="#373B57"
+            app:cbn_fabBg="#373B57"
+            app:cbn_selectedColor="#FFFFFF"
+            app:cbn_unSelectedColor="#73768A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
